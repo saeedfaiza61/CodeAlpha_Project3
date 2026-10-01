@@ -1,0 +1,25 @@
+127.0.0.1 - - [22/Sep/2026 14:02:06] "GET / HTTP/1.1" 404 -
+127.0.0.1 - - [22/Sep/2026 14:02:06] "GET /favicon.ico HTTP/1.1" 404 -
+10.0.2.15 - - [22/Sep/2026 14:02:27] "GET / HTTP/1.1" 404 -
+10.0.2.15 - - [22/Sep/2026 14:02:27] "GET /favicon.ico HTTP/1.1" 404 -
+10.0.2.15 - - [22/Sep/2026 14:02:35] "GET / HTTP/1.1" 404 -
+10.0.2.15 - - [22/Sep/2026 14:03:52] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [22/Sep/2026 14:04:58] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [22/Sep/2026 14:05:10] "POST /login HTTP/1.1" 401 -
+10.0.2.15 - - [22/Sep/2026 14:06:20] "POST /login HTTP/1.1" 401 -
+10.0.2.15 - - [22/Sep/2026 14:06:38] "POST /login HTTP/1.1" 401 -
+10.0.2.15 - - [22/Sep/2026 14:07:02] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [22/Sep/2026 14:07:05] "GET /login HTTP/1.1" 200 -
+10.0.2.15 - - [22/Sep/2026 14:07:30] "POST /login HTTP/1.1" 302 -
+10.0.2.15 - - [22/Sep/2026 14:07:30] "GET /welcome HTTP/1.1" 200 -
+10.0.2.15 - - [22/Sep/2026 14:10:02] "GET / HTTP/1.1" 404 -
+10.0.2.15 - - [22/Sep/2026 14:10:09] "GET /login HTTP/1.1" 200 -
+10.0.2.15 - - [22/Sep/2026 14:10:21] "POST /login HTTP/1.1" 302 -
+10.0.2.15 - - [22/Sep/2026 14:10:21] "GET /welcome HTTP/1.1" 200 -
+10.0.2.15 - - [22/Sep/2026 14:14:23] "GET /welcome/?name=<script>alert('XXS')</script> HTTP/1.1" 404 -
+10.0.2.15 - - [22/Sep/2026 14:15:44] "GET /welcome?name=<script>alert('XSS')</script> HTTP/1.1" 200 -
+10.0.2.15 - - [22/Sep/2026 14:17:50] "GET /%20%20welcome?name=<img%20src=x%20onerror=alert('XSS')> HTTP/1.1" 404 -
+127.0.0.1 - - [22/Sep/2026 14:18:48] "GET /welcome?name=<img%20src=x%20onerror=alert('XSS')> HTTP/1.1" 200 -
+127.0.0.1 - - [22/Sep/2026 14:18:48] "GET /x HTTP/1.1" 404 -
+127.0.0.1 - - [22/Sep/2026 14:20:41] "GET /welcome?name=<b>test</b> HTTP/1.1" 200 -
+127.0.0.1 - - [22/Sep/2026 14:22:06] "GET /welcome?name=<b>test</b> HTTP/1.1" 200 
